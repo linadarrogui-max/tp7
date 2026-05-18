@@ -3,6 +3,7 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const signup = document.getElementById('signup');
 
+alert('welcome to the signup page!');
 console.log(name);
 console.log(email);
 console.log(password);
