@@ -1,20 +1,65 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.container{
+    background: white;
+    padding: 30px;
+    width: 320px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.top-buttons{
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.top-buttons button{
+    flex: 1;
+}
+
+#signupPage,
+#signinPage{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#signinPage{
+    display: none;
+}
+
 h1{
-    color: rgb(255, 0, 255);
-    text-align:enter;
-}
-.forminscription{
-    display:flex;
-    align-items:center;
-    gap:20px;
-    flex-direction:column;
-    
-
-}
-.formconnection{
-    display:flex;
-    align-items:center;
-    gap:20px;
-    flex-direction:column;
-    
+    text-align: center;
+    color: purple;
 }
 
+input{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button{
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+
+    background: purple;
+    color: white;
+
+    cursor: pointer;
+}

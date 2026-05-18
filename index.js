@@ -1,29 +1,33 @@
-const signupForm = document.getElementById('signupForm');
-const signinForm = document.getElementById('signinForm');
+const signupPageBtn = document.getElementById('signupPageBtn');
 
-const showSignup = document.getElementById('showSignup');
-const showSignin = document.getElementById('showSignin');
+const signinPageBtn = document.getElementById('signinPageBtn');
 
+const signupPage = document.getElementById('signupPage');
 
-// afficher Sign Up
-showSignup.addEventListener('click', () => {
-
-    signupForm.style.display = 'flex';
-    signinForm.style.display = 'none';
-
-});
+const signinPage = document.getElementById('signinPage');
 
 
-// afficher Sign In
-showSignin.addEventListener('click', () => {
+// afficher inscription
+signupPageBtn.addEventListener('click', () => {
 
-    signupForm.style.display = 'none';
-    signinForm.style.display = 'flex';
+    signupPage.style.display = 'flex';
+
+    signinPage.style.display = 'none';
 
 });
 
 
-// bouton Sign Up
+// afficher connexion
+signinPageBtn.addEventListener('click', () => {
+
+    signupPage.style.display = 'none';
+
+    signinPage.style.display = 'flex';
+
+});
+
+
+// inscription
 document.getElementById('signupBtn').addEventListener('click', () => {
 
     const name = document.getElementById('signupName').value;
@@ -38,16 +42,12 @@ document.getElementById('signupBtn').addEventListener('click', () => {
         return;
     }
 
-    alert(
-        'Compte créé !' +
-        '\nNom : ' + name +
-        '\nEmail : ' + email
-    );
+    alert('Compte créé avec succès');
 
 });
 
 
-// bouton Sign In
+// connexion
 document.getElementById('signinBtn').addEventListener('click', () => {
 
     const email = document.getElementById('signinEmail').value;
@@ -60,9 +60,6 @@ document.getElementById('signinBtn').addEventListener('click', () => {
         return;
     }
 
-    alert(
-        'Connexion réussie !' +
-        '\nEmail : ' + email
-    );
+    alert('Connexion réussie');
 
 });
