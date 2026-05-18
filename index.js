@@ -1,65 +1,35 @@
-const signupPageBtn = document.getElementById('signupPageBtn');
+const loginBtn = document.getElementById('loginBtn');
 
-const signinPageBtn = document.getElementById('signinPageBtn');
+const signupBtn = document.getElementById('signupBtn');
 
-const signupPage = document.getElementById('signupPage');
+const loginForm = document.getElementById('loginForm');
 
-const signinPage = document.getElementById('signinPage');
-
-
-// afficher inscription
-signupPageBtn.addEventListener('click', () => {
-
-    signupPage.style.display = 'flex';
-
-    signinPage.style.display = 'none';
-
-});
+const signupForm = document.getElementById('signupForm');
 
 
 // afficher connexion
-signinPageBtn.addEventListener('click', () => {
+loginBtn.addEventListener('click', () => {
 
-    signupPage.style.display = 'none';
+    loginForm.classList.remove('hidden');
 
-    signinPage.style.display = 'flex';
+    signupForm.classList.add('hidden');
 
-});
+    loginBtn.classList.add('active');
 
-
-// inscription
-document.getElementById('signupBtn').addEventListener('click', () => {
-
-    const name = document.getElementById('signupName').value;
-
-    const email = document.getElementById('signupEmail').value;
-
-    const password = document.getElementById('signupPassword').value;
-
-
-    if(name === '' || email === '' || password === ''){
-        alert('Veuillez remplir tous les champs');
-        return;
-    }
-
-    alert('Compte créé avec succès');
+    signupBtn.classList.remove('active');
 
 });
 
 
-// connexion
-document.getElementById('signinBtn').addEventListener('click', () => {
+// afficher inscription
+signupBtn.addEventListener('click', () => {
 
-    const email = document.getElementById('signinEmail').value;
+    signupForm.classList.remove('hidden');
 
-    const password = document.getElementById('signinPassword').value;
+    loginForm.classList.add('hidden');
 
+    signupBtn.classList.add('active');
 
-    if(email === '' || password === ''){
-        alert('Veuillez remplir tous les champs');
-        return;
-    }
-
-    alert('Connexion réussie');
+    loginBtn.classList.remove('active');
 
 });
