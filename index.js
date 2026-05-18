@@ -1,22 +1,68 @@
-const name = document.getElementById('name');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const signup = document.getElementById('signup');
+const signupForm = document.getElementById('signupForm');
+const signinForm = document.getElementById('signinForm');
 
-console.log(name);
-console.log(email);
-console.log(password);
-console.log(signup);
+const showSignup = document.getElementById('showSignup');
+const showSignin = document.getElementById('showSignin');
 
-signup.addEventListener('click', () => {
-    console.log('button clicked!');
-    console.log(name.value);
-    console.log(email.value);
-    console.log(password.value);
+
+// afficher Sign Up
+showSignup.addEventListener('click', () => {
+
+    signupForm.style.display = 'flex';
+    signinForm.style.display = 'none';
+
+});
+
+
+// afficher Sign In
+showSignin.addEventListener('click', () => {
+
+    signupForm.style.display = 'none';
+    signinForm.style.display = 'flex';
+
+});
+
+
+// bouton Sign Up
+document.getElementById('signupBtn').addEventListener('click', () => {
+
+    const name = document.getElementById('signupName').value;
+
+    const email = document.getElementById('signupEmail').value;
+
+    const password = document.getElementById('signupPassword').value;
+
+
+    if(name === '' || email === '' || password === ''){
+        alert('Veuillez remplir tous les champs');
+        return;
+    }
 
     alert(
-        'name: ' + name.value +
-        "\nemail: " + email.value +
-        "\npassword: " + password.value
+        'Compte créé !' +
+        '\nNom : ' + name +
+        '\nEmail : ' + email
     );
+
+});
+
+
+// bouton Sign In
+document.getElementById('signinBtn').addEventListener('click', () => {
+
+    const email = document.getElementById('signinEmail').value;
+
+    const password = document.getElementById('signinPassword').value;
+
+
+    if(email === '' || password === ''){
+        alert('Veuillez remplir tous les champs');
+        return;
+    }
+
+    alert(
+        'Connexion réussie !' +
+        '\nEmail : ' + email
+    );
+
 });

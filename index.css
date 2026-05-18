@@ -2,7 +2,7 @@ h1{
     color: rgb(255, 0, 255);
     text-align:enter;
 }
-.form{
+.forminscription{
     display:flex;
     align-items:center;
     gap:20px;
@@ -10,3 +10,11 @@ h1{
     
 
 }
+.formconnection{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-direction:column;
+    
+}
+
